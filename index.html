@@ -3,279 +3,454 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+        <title>E-commerce template</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">Portfolio</a>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
+    <header class="topbar d-flex justify-content-between align-items-center p-3 bg-light">
+    <div class="logo text-danger">MyStore</div>
+    <nav class="nav text-dark">
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
+    <div class="actions text-dark text-center">
+     <button class="btn"> <a href="#login" class="btn text-info p-1 text-white" >Login</a></button>
+      <button class="btn"><a href="#Register" class="btn text-info">Register</a></button>
+      <button class="btn"><a href="#cart" class="btn text-info"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+</svg>Cart(0)</a></button>
+    </div>
+  </header>
+  <!-- hero section page -->
+  <section class="hero" id="home">
+    <div class="hero-content text-info">
+    <h1 class="mb-0 ">New Season is Arrived</h1>
+    <p class="text-white" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, beatae?
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+      <a href="#" class="hero-btn">Shop Now</a>
+    </p>
+    </div>
+ </section>
+  <!--  this is a products page -->
+  <section class="page" id="products"> 
+    <h2 class="section-title display-6 fs-1">Latest Products</h2>
+    <div class="straight-line"></div>
+    <!-- Filter Buttons -->
+     <div class="filter-buttons">
+  
+      <button class="filter-btn active text-primary"  data-category="all">All</button>
+      <button class="filter-btn text-primary" data-category="men">Men</button>
+      <button class="filter-btn text-primary" data-category="women">Women</button>
+      <button class="filter-btn text-primary" data-category="kids">Kids</button> 
+      <button class="filter-btn text-primary" data-category="Electronics">Electronics</button>
+     </div>
+  
+  <div class="container">
+    <div class="product-grid">
+      <!-- men's Product -->
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Hi, I'm  <span class="highlight">Ali Basha</span></h1>
-                <p class="hero-subtitle">Full Stack Developer & Designer</p>
-                <p class="hero-description">I create beautiful, functional, and user-centered digital experiences.</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="pic.png" alt="Ali Basha - Full Stack Developer" class="profile-image">
-            </div>
+      <div class="product-card">
+        <img src="https://img.tatacliq.com/images/i16//437Wx649H/MP000000003322870_437Wx649H_202403191557091.jpeg">
+        <h3>Men's Watches</h3>
+        <p>This car is a very rare and expensive concept car</p>
+        <span class="price">$5,000</span>
+
+        <div class="btn-group">
+          <button class="btn-cart btn-dark btn-outline-dark ">Add to Cart</button>
+          <button class="btn-primary btn-outline-primary px-1 py-1  ">View Details</button>
         </div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.zoomshoes.in/cdn/shop/files/PC75TAN_6.jpg?v=1688470850&width=1200">
+        <h3>men's Shoes</h3>
+        <p>This is a beautiful and comfortable men's shoes</p>
+        <span class="price">$1,000</span>
+
+        <div class="btn-group">
+          <button class="btn-cart btn-dark btn-outline-dark ">Add to Cart</button>
+          <button class="btn-primary btn-outline-primary px-1 py-1  ">View Details</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://i.pinimg.com/736x/98/ba/c3/98bac3e22b50d02d1235cd89e0522476.jpg">
+        <h3>Men's Shirts</h3>
+        <p>This is a beautiful and comfortable men's shirts</p>
+        <span class="price">$250,000</span>
+
+        <div class="btn-group">
+          <button class="btn-cart btn-dark btn-outline-dark ">Add to Cart</button>
+          <button class="btn-primary btn-outline-primary px-1 py-1  ">View Details</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRolbeIMfSdj3puVY_HDYDYiWLoaxvbCkd7CA&s">
+        <h3>Men's Shirts</h3>
+        <p>This is a beautiful and comfortable men's shirts</p>
+        <span class="price">$250,000</span>
+
+        <div class="btn-group">
+          <button class="btn-cart btn-dark btn-outline-dark ">Add to Cart</button>
+          <button class="btn-primary btn-outline-primary px-1 py-1  ">View Details</button>
+        </div>
+      </div>
+      <!-- Women's Product -->
+      <div class="product-card">
+        <img src="https://cdn.shopify.com/s/files/1/0670/5578/0143/files/t_Shirt.jpg?v=1744277516">
+        <h3>Women's T-Shirt</h3>
+        <p>This is a beautiful and comfortable women's t-shirt Lorem ipsum dolor sit.</p>
+        <span class="price">$1,000</span>
+
+        <div class="btn-group">
+          <button class="btn-cart btn-dark btn-outline-dark ">Add to Cart</button>
+          <button class="btn-primary btn-outline-primary px-1 py-1  ">View Details</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.cheersagar.com/images/blog/17176683591463.jpeg">
+        <h3>Women's paint </h3>
+        <p>This is a beautiful and rare women's paint Lorem, ipsum dolor.</p>
+        <span class="price">$50,000</span>
+
+        <div class="btn-group">
+          <button class="btn-cart btn-dark btn-outline-dark ">Add to Cart</button>
+          <button class="btn-primary btn-outline-primary px-1 py-1  ">View Details</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://media.landmarkshops.in/cdn-cgi/image/h=739,w=499,q=85,fit=cover/max-new/1000014271432-OffWhite-WHITE-1000014271432_01-2100.jpg">
+        <h3>Women's Handbag</h3>
+        <p>This is a beautiful and rare women's handbag</p>
+        <span class="price">$5,000</span>
+
+        <div class="btn-group">
+          <button class="btn-cart btn-dark btn-outline-dark ">Add to Cart</button>
+          <button class="btn-primary btn-outline-primary px-1 py-1  ">View Details</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71AIfvg-STL._AC_UY1100_.jpg">
+        <h3>Women's jeans</h3>
+        <p>This is a beautiful and comfortable women's jeans Lorem ipsum dolor sit.</p>
+        <span class="price">$50,000</span>
+
+        <div class="btn-group">
+          <button class="btn-cart btn-dark btn-outline-dark ">Add to Cart</button>
+          <button class="btn-primary btn-outline-primary px-1 py-1  ">View Details</button>
+        </div>
+      </div>
+      <!-- Gold Product  -->
+      <div class="product-card">
+        <img src="https://saubhagyavati.in/cdn/shop/files/IMG-4291.jpg?v=1715165407">
+        <h3>Gold Necklace</h3>
+        <p>This is a beautiful and rare gold necklace</p>
+        <span class="price">$250,000</span>
+
+        <div class="btn-group">
+          <button class="btn-cart btn-dark btn-outline-dark ">Add to Cart</button>
+          <button class="btn-primary btn-outline-primary px-1 py-1  ">View Details</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://www.caratlane.com/blog/wp-content/uploads/2025/01/latest-trending-jewellery.jpg">
+        <h3>Gold Earrings</h3>
+        <p>This is a beautiful and rare gold earrings</p>
+        <span class="price">$35,000</span>
+
+        <div class="btn-group">
+          <button class="btn-cart btn-dark btn-outline-dark ">Add to Cart</button>
+          <button class="btn-primary btn-outline-primary px-1 py-1  ">View Details</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://rapaport.com/wp-content/uploads/2024/07/1280x720-1-20240701122015.jpg">
+        <h3>Gold bracelet</h3>
+        <p>This is a beautiful and rare gold bracelet</p>
+        <span class="price">$55,000</span>
+
+        <div class="btn-group">
+          <button class="btn-cart btn-dark btn-outline-dark ">Add to Cart</button>
+          <button class="btn-primary btn-outline-primary px-1 py-1  ">View Details</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://blogapi.perrian.com/wp-content/uploads/2022/03/5-Must-Have-Diamond-Jewellery-Pieces-You-Cant-Ignore.jpg">
+        <h3>Diamond Ring</h3>
+        <p>This is a beautiful and rare diamond ring</p>
+        <span class="price">$50,000</span>
+
+        <div class="btn-group">
+          <button class="btn-cart btn-dark btn-outline-dark ">Add to Cart</button>
+          <button class="btn-primary btn-outline-primary px-1 py-1  ">View Details</button>
+        </div>
+      </div>
+      <!-- Electronics Product  -->
+      <div class="product-card">
+        <img src="https://gogizmo.in/wp-content/uploads/2024/10/Apple-iPhone-16-Pro-Desert-Titanium2-600x525.png">
+        <h3>iPhone 16 Pro</h3>
+        <p>This is a beautiful and rare iPhone 16 Pro 128GB</p>
+        <span class="price">$999</span>
+
+        <div class="btn-group">
+          <button class="btn-cart btn-dark btn-outline-dark ">Add to Cart</button>
+          <button class="btn-primary btn-outline-primary px-1 py-1  ">View Details</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://inspireonline.in/cdn/shop/files/iPhone_15_Pink_PDP_Image_Position-1__en-IN.jpg?v=1694605206">
+        <h3>iphone 15</h3>
+        <p>This is a beautiful and rare iPhone 15 128GB</p>
+        <span class="price">$888</span>
+
+        <div class="btn-group">
+          <button class="btn-cart btn-dark btn-outline-dark ">Add to Cart</button>
+          <button class="btn-primary btn-outline-primary px-1 py-1  ">View Details</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTndMcJW71HLgi9ntgoterJiJJjLxbtOVVpyA&s">
+        <h3>Headphones</h3>
+        <p>This is a beautiful and rare wireless headphones</p>
+        <span class="price">$345</span>
+
+        <div class="btn-group">
+          <button class="btn-cart btn-dark btn-outline-dark ">Add to Cart</button>
+          <button class="btn-primary btn-outline-primary px-1 py-1  ">View Details</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71Cf6dnu01L._AC_UF1000,1000_QL80_.jpg">
+        <h3>HP Laptop </h3>
+        <p>This is a beautiful and rare HP laptop 12th Gen,intel core i5</p>
+        <span class="price">$1,200</span>
+
+        <div class="btn-group">
+          <button class="btn-cart btn-dark btn-outline-dark fs-1">Add to Cart</button>
+          <button class="btn-primary btn-outline-primary px-1 py-1  fw-bold">View Details</button>
+        </div>
+      </div>
+
+      <!-- copy same card again -->
+    </div>
+    <div class="box-1 text-center p-5"><h5>Made by @AchieversIT</h5></div>
+  </div>
+  <!-- About Page -->
+  <!-- <section class="pagec" id="about"> -->
+    <div class="paget" id="about">
+    <div class="aboutus text-center text-primary m-5"><h1 class="mt-2 ">About Us</h1></div>
+    <div class="smallline"></div>
+    <div class="parag " ><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, pariatur sed optio,
+       eveniet obcaecati eaque repellendus distinctio, harum dolor quaerat saepe placeat. 
+       Repudiandae consequatur impedit odio voluptatem at praesentium culpa vero ratione molestias magnam officia,
+        consequuntur maxime sint quaerat nemo debitis facilis, repellat velit fuga earum commodi autem unde dignissimos.
+       Quaerat, tenetur. Natus pariatur ratione deleniti nobis nisi obcaecati sit?Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+       Sit magni odit vitae nobis incidunt omnis voluptatibus, iste consequuntur, atque maxime,
+        sed repellendus voluptate unde alias quasi assumenda quos a adipisci ipsam deleniti commodi laboriosam voluptates error corporis.
+        Voluptates, totam delectus?</p>
+    </div>
+    <!-- </div> -->
+  <!-- </section> -->
+   <!-- our products page -->
+   <section class="ourproducts">
+  <h1 class="text-center text-primary m-5 ">Our Products</h1>
+   <div class="product-container">
+      <div class="card ">
+        <img src="https://orionmallgorakhpur.com/wp-content/uploads/2023/07/5-15.jpg" alt="">
+        <h3>Men's Clothing</h3>
+      </div>
+      <div class="card">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/00/43/b3/caption.jpg?w=1200&h=-1&s=1" alt="">
+        <h3>Women's Clothing</h3>
+      </div>
+      <div class="card">
+        <img src="https://c8.alamy.com/comp/FAJBF4/gold-jewelry-shop-in-little-india-of-kuala-lumpur-malaysia-FAJBF4.jpg" alt="">
+        <h3>Jewelery</h3>
+      </div>
+      <div class="card">
+        <img src="https://thumbs.dreamstime.com/b/saint-petersburg-russia-circa-may-goods-display-sony-store-galeria-shopping-center-electronics-store-134641471.jpg" alt="">
+        <h3>Electronics</h3>
+      </div>
+    </div>
+   </div>
     </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I'm a passionate developer with a love for creating innovative solutions and beautiful user experiences. With expertise in modern web technologies, I bring ideas to life through clean, efficient code and thoughtful design.</p>
-                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.</p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3>3+</h3>
-                            <p>Years Experience</p>
-                        </div>
-                        <div class="stat">
-                            <h3>50+</h3>
-                            <p>Projects Completed</p>
-                        </div>
-                        <div class="stat">
-                            <h3>20+</h3>
-                            <p>Happy Clients</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- contact us page -->
+    <section class="pagec" id="contact">
+      <div class="contactus text-center text-primary m-5"><h1>Contact Us</h1></div>
+      <div class="smalllinea"></div>
+      <div class="nem">
+        <h6>Name</h6>
+        <input type="text" placeholder="Enter your name">
+        <h6>Email</h6>
+        <input type="text" placeholder="Enter your email">
+        <h6>Message</h6>
+        <textarea placeholder="Enter your message"></textarea>
+        <div class="send">
+        <button class="btn btn-outline-secondary btn-sm px-4 py-2">Send</button>
         </div>
+        
+      </div>
     </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Frontend</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">HTML5</div>
-                        <div class="skill-item">CSS3</div>
-                        <div class="skill-item">JavaScript</div>
-                        <div class="skill-item">React</div>
-                        <!-- <div class="skill-item">Vue.js</div> -->
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">Node.js</div>
-                        <!-- <div class="skill-item">Python</div> -->
-                        <div class="skill-item">Java</div>
-                        <div class="skill-item">SQL</div>
-                        <div class="skill-item">MongoDB</div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Tools & Others</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">Git</div>
-                        <div class="skill-item">Docker</div>
-                        <div class="skill-item">AWS</div>
-                        <div class="skill-item">Figma</div>
-                        <div class="skill-item">Agile</div>
-                    </div>
-                </div>
-            </div>
+    <!-- login page -->
+    <section class="paper" id="login">
+      <div class="loginpage text-center text-primary m-5 loginpage-outline-primary"><h2>Login</h2></div>
+      <div class="lined"></div>
+      <div class="enter">
+        <h6>Email address</h6>
+        <input type="text" placeholder="name@gamail.com">
+        <h6>Password</h6>
+        <input type="password" placeholder="Enter your password">
+        <div>
+        <p class="text">New here? <a href="#">Register</a></p>
+        <div class="ali">
+        <button class="btn btn-outline-primary  ">Login</button>
+           <!-- <a  class="btn btn-outline-primary btn-lg mt-3" href="#pricing">Buy Now</a> -->
         </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-code"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>E-Commerce Platform</h3>
-                        <p>A full-stack e-commerce solution with user authentication, payment integration, and admin dashboard.</p>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Task Management App</h3>
-                        <p>A responsive task management application with drag-and-drop functionality and real-time updates.</p>
-                        <div class="project-tech">
-                            <span>Vue.js</span>
-                            <span>Firebase</span>
-                            <span>CSS3</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Data Visualization Dashboard</h3>
-                        <p>An interactive dashboard for visualizing complex data sets with charts and real-time analytics.</p>
-                        <div class="project-tech">
-                            <span>D3.js</span>
-                            <span>Java</span>
-                            <span>Flask</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's work together!</h3>
-                    <p>I'm always interested in new opportunities and exciting projects. Feel free to reach out if you'd like to collaborate or just want to say hello.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>alialibasha329@gmail.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+91 9391551038</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Kurnool, India</span>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
+      </div>
+     </section>
+     <!-- Register page -->
+     <section class="pagey" id="Register">
+      <div class="registerpage text-center text-primary m-5"><h2>Register</h2></div>
+      <div class="lineda"></div>
+      <div class="enterd">
+        <h6>Full Name</h6>
+        <input type="text" placeholder="Enter your name">
+        <h6>Email address</h6>
+        <input type="text" placeholder="Enter your email">
+        <h6>Password</h6>
+        <input type="password" placeholder="Enter your password">
+        <div>
+          <p>Already have an account? <a href="#">Login</a></p>
+          <div class="basha">
+        <button class="btn btn-outline-primary fw-bold">Register</button>
+          </div>
         </div>
-    </section>
+      </div>
+     </section>
+     <!-- cart page -->
+      <div class="pagef" id="cart">
+      <h2 class="title text-center text-primary m-5">Cart</h2>
+      <div class="linef"></div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Ali Basha. All rights reserved.</p>
-        </div>
-    </footer>
+<div class="cart-container">
 
-    <script>
-        // Mobile navigation toggle
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
+  <!-- LEFT : ITEM LIST -->
+  <div class="item-list">
+    <h3>Item List</h3>
 
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
+    <div class="cart-item">
+      <img src="https://orionmallgorakhpur.com/wp-content/uploads/2023/07/5-15.jpg" alt="product">
+      <div class="item-details">
+        <h4>Fjallraven Backpack</h4>
+        <p>Fits 15 Laptops</p>
+        <span>1 × $109.95</span>
+      </div>
 
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        }));
+      <div class="qty">
+        <button>-</button>
+        <span>1</span>
+        <button>+</button>
+      </div>
+    </div>
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
+    <div class="cart-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTndMcJW71HLgi9ntgoterJiJJjLxbtOVVpyA&s" alt="product">
+      <div class="item-details">
+        <h4>wireless Headphones</h4>
+        <span>1 × $22.30</span>
+      </div>
+
+      <div class="qty">
+        <button>-</button>
+        <span>1</span>
+        <button>+</button>
+      </div>
+    </div>
+    <div class="cart-item">
+      <img src="https://inspireonline.in/cdn/shop/files/iPhone_15_Pink_PDP_Image_Position-1__en-IN.jpg?v=1694605206" alt="product">
+      <div class="item-details">
+        <h4>iPhone 15</h4>
+        <span>1 × $799.99</span>
+      </div>
+
+      <div class="qty">
+        <button>-</button>
+        <span>1</span>
+        <button>+</button>
+      </div>
+    </div>
+    <div class="cart-item">
+      <img src="https://gogizmo.in/wp-content/uploads/2024/10/Apple-iPhone-16-Pro-Desert-Titanium2-600x525.png" alt="product">
+      <div class="item-details">
+        <h4>iPhone 16 Pro</h4>
+        <span>1 × $1099.99</span>
+      </div>
+
+      <div class="qty">
+        <button>-</button>
+        <span>1</span>
+        <button>+</button>
+      </div>
+    </div>
+    <div class="cart-item">
+      <img src="https://blogapi.perrian.com/wp-content/uploads/2022/03/5-Must-Have-Diamond-Jewellery-Pieces-You-Cant-Ignore.jpg" alt="product">
+      <div class="item-details">
+        <h4>Diamond Bracelate</h4>
+        <span>1 × $22.30</span>
+      </div>
+
+      <div class="qty">
+        <button>-</button>
+        <span>1</span>
+        <button>+</button>
+      </div>
+    </div>
+    <div class="cart-item">
+      <img src="https://img.tatacliq.com/images/i16//437Wx649H/MP000000003322870_437Wx649H_202403191557091.jpeg" alt="product">
+      <div class="item-details">
+        <h4>Men's Watches</h4>
+        <span>1 × $22.30</span>
+      </div>
+
+      <div class="qty">
+        <button>-</button>
+        <span>1</span>
+        <button>+</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RIGHT : ORDER SUMMARY -->
+  <div class="summary">
+    <h3>Order Summary</h3>
+
+    <div class="row">
+      <span>Products (2)</span>
+      <span>$132</span>
+    </div>
+
+    <div class="row">
+      <span>Shipping</span>
+      <span>$30</span>
+    </div>
+
+    <hr>
+
+    <div class="row total">
+      <span>Total amount</span>
+      <span>$162</span>
+    </div>
+
+    <button class="checkout-btn">Go to checkout</button>
+  </div>
+
+</div>
+</div>
+
+   
 </body>
 </html>
